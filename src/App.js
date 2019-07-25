@@ -1,13 +1,10 @@
 import React from "react";
-import { ThemeProvider } from "./helpers/theme";
-import { GlobalStyle } from "./styles/Page";
-import { Routes } from "./Routes";
+import { BrowserRouter, Route } from "react-router-dom";
 
-export const App = () => {
-  return (
-    <ThemeProvider>
-      <Routes />
-      <GlobalStyle />
-    </ThemeProvider>
-  );
-};
+import { Home } from "./pages/Home";
+
+export const App = () => (
+  <BrowserRouter>
+    <Route path="/" exact component={Home} />
+  </BrowserRouter>
+);

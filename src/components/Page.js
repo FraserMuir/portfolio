@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../helpers/theme";
-import * as Styled from "../styles/Page";
+import { ThemeContext } from "../helpers/ThemeProvider";
+import * as Styled from "../styles/page";
 
 export const Page = ({ title, children }) => {
   const { pageBackground, cardBackground } = useContext(ThemeContext);
